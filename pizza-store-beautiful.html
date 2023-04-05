@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Store Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <style>
+      .navbar-item img {
+        max-height: 4rem;
+      }
+
+      .card {
+        height: 100%;
+      }
+
+      .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f355.png" alt="Placeholder logo">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#"> Home </a>
+          <a class="navbar-item" href="#"> Menu </a>
+          <a class="navbar-item" href="#"> About </a>
+          <a class="navbar-item" href="#"> Contact </a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary" href="#">
+                <strong>Contact Us</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <h1 class="title has-text-centered">Pizza Menu</h1>
+        <div class="columns is-centered">
+          <div class="column is-narrow">
+            <div class="card has-background-warning">
+              <div class="card-content">
+                <p class="title is-4">Margherita</p>
+                <p class="subtitle is-6">$10.99</p>
+                <p class="content">Tomato sauce, mozzarella, fresh basil</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-narrow">
+            <div class="card has-background-danger">
+              <div class="card-content">
+                <p class="title is-4">Pepperoni</p>
+                <p class="subtitle is-6">$12.99</p>
+                <p class="content">Tomato sauce, mozzarella, pepperoni</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-narrow">
+            <div class="card has-background-success">
+              <div class="card-content">
+                <p class="title is-4">Hawaiian</p>
+                <p class="subtitle is-6">$11.99</p>
+                <p class="content">Tomato sauce, mozzarella, ham, pineapple</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-narrow">
+            <div class="card has-background-primary">
+              <div class="card-content">
+                <p class="title is-4">Vegetarian</p>
+                <p class="subtitle is-6">$13.99</p>
+                <p class="content">Tomato sauce, mozzarella, mushrooms, onions, bell peppers</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-narrow">
+            <div class="card has-background-info">
+              <div class="card-content">
+                <p class="title is-4">Brazilian</p>
+                <p class="subtitle is-6">$15.99</p>
+                <p class="content">Tomato sauce, mozzarella, farofa, bacon, bell peppers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half">
+            <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.75512790679915%2C-23.61052173883271%2C-46.74843186187745%2C-23.60512872020851&amp;layer=mapnik&amp;marker=-23.607825230681427%2C-46.75177938433838" style="border: 1px solid black"></iframe>
+          </div>
+          <div class="column is-half">
+            <h2 class="title">Our Location</h2>
+            <p>Visit us at:</p>
+            <p>123 Main St, City, State</p>
+            <p>Phone: 555-555-5555</p>
+            <p>Email: info@pizzastore.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer has-background-light">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Pizza Store</strong> by Gabriel Martins. The source code is licensed <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL v3</a>.
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Navbar burger toggle
+      document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
